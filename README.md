@@ -3,6 +3,7 @@
 ## 目录
 * [wx.key](#key)
 * [require/module.exports](#req)
+* [navigator](#nav)
 #### <a id="key">wx:key</a>
 重新渲染，使用wx：key不重新创建各组件，仅仅是改变排列顺序，而不使用，则重新创建各组件。
 #### <a id="req">require/module.exports</a>
@@ -38,3 +39,6 @@ console.log(b);
 1. module.exports 初始值为一个空对象 {}
 2. exports 是指向的 module.exports 的引用
 3. require() 返回的是 module.exports 而不是 exports
+#### navigator
+实现页面跳转的方法：在wxml中使用<navigator>设置其url即为其跳转的页面，如本次小程序中/pages/detail/detail,想要实现页面跳转，就在后面加上问号和要传递的参数，如"/pages/detail/detail?id={{pitem.id}}",如果要传递多个参数，则用&连接。
+<br>除了可以在wxml中实现，还可以在js中使用wx.navigateTo,同时是用问号传递参数，如在天气小程序中url:"/pages/list/list?city="+this.data.city
