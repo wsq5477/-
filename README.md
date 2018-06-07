@@ -1,11 +1,11 @@
 # 购物小程序
 这是一个购物小程序的学习历程
-##目录
-* <a herf="#key">wx.key</a>
-* require/module.exports
+## 目录
+* [wx.key](#key)
+* [require/module.exports](#req)
 #### <a id="key">wx:key</a>
 重新渲染，使用wx：key不重新创建各组件，仅仅是改变排列顺序，而不使用，则重新创建各组件。
-#### require/module.exports
+#### <a id="req">require/module.exports</a>
 require用来加载代码，exports/module.exports用来导出代码
 <br>exports/module.exports的关系
 <br>先看一个栗子
