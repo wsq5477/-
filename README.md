@@ -4,6 +4,7 @@
 * [wx.key](#key)
 * [require/module.exports](#req)
 * [navigator](#nav)
+* [button](#btn)
 #### <a id="key">wx:key</a>
 重新渲染，使用wx：key不重新创建各组件，仅仅是改变排列顺序，而不使用，则重新创建各组件。
 #### <a id="req">require/module.exports</a>
@@ -43,3 +44,5 @@ console.log(b);
    实现页面跳转的方法：在wxml中使用<navigator>设置其url即为其跳转的页面，如本次小程序中/pages/detail/detail,想要实现页面跳转，就在后面加上问号和要传递的参数，如"/pages/detail/detail?id={{pitem.id}}",如果要传递多个参数，则用&连接。
    <br>除了可以在wxml中实现，还可以在js中使用wx.navigateTo,同时是用问号传递参数，如在天气小程序中url:"/pages/list/list?city="+this.data.city
    <br>navigator中可设置参数redirect,如果为true，那么将会在当前页面打开，即不会有返回上一页面的标识，默认值为false
+#### <a id="btn">button<a>
+   小程序中的button和web中的button相比，多了很多新的功能。如，button中有功能open-type,当open-type为getUserInfo时可获取用户信息，通过button的另一个属性bindgetuserinfo调用获取用户信息，但是通过此方法不能再次授权。
