@@ -48,7 +48,7 @@ console.log(b);
 #### <a id="btn">button<a>
    小程序中的button和web中的button相比，多了很多新的功能。如，button中有功能open-type,当open-type为getUserInfo时可获取用户信息，通过button的另一个属性bindgetuserinfo调用获取用户信息，但是通过此方法不能再次授权。
 
-#### <a id="assign>Object.assign</a>
+#### <a id="assign">Object.assign</a>
    Object.assign用于对象合并，除了第一个是目标对象，其他都是源对象，举个例子。
 ```javascript
 var target = { a: 1 };  
