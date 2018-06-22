@@ -5,6 +5,7 @@
 * [require/module.exports](#req)
 * [navigator](#nav)
 * [button](#btn)
+* [Object.assign](#assign)
 #### <a id="key">wx:key</a>
 重新渲染，使用wx：key不重新创建各组件，仅仅是改变排列顺序，而不使用，则重新创建各组件。
 #### <a id="req">require/module.exports</a>
@@ -46,3 +47,24 @@ console.log(b);
    <br>navigator中可设置参数redirect,如果为true，那么将会在当前页面打开，即不会有返回上一页面的标识，默认值为false
 #### <a id="btn">button<a>
    小程序中的button和web中的button相比，多了很多新的功能。如，button中有功能open-type,当open-type为getUserInfo时可获取用户信息，通过button的另一个属性bindgetuserinfo调用获取用户信息，但是通过此方法不能再次授权。
+
+#### <a id="assign>Object.assign</a>
+   Object.assign用于对象合并，除了第一个是目标对象，其他都是源对象，举个例子。
+```javascript
+var target = { a: 1 };  
+var source1 = { b: 2 };  
+var source2 = { c: 3 };  
+Object.assign(target, source1, source2);  
+target // {a:1, b:2, c:3}  
+```
+   如果有相同属性，那么后面的会覆盖前面的。
+```javascript
+var target = { a: 1, b: 1 };  
+var source1 = { b: 2, c: 2 };  
+var source2 = { c: 3 };  
+Object.assign(target, source1, source2);  
+target // {a:1, b:2, c:3}  
+```
+注意，这是一个浅拷贝，拷贝的只是源对象的引用，当源对象的属性值改变时，目标对象的该属性值也会改变。
+<br>[详细参考资料](https://blog.csdn.net/qq_30100043/article/details/53422657)
+   
