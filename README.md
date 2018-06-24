@@ -6,6 +6,7 @@
 * [navigator](#nav)
 * [button](#btn)
 * [Object.assign](#assign)
+* [put,post,get](#put)
 #### <a id="key">wx:key</a>
 重新渲染，使用wx：key不重新创建各组件，仅仅是改变排列顺序，而不使用，则重新创建各组件。
 #### <a id="req">require/module.exports</a>
@@ -68,3 +69,10 @@ target // {a:1, b:2, c:3}
 注意，这是一个浅拷贝，拷贝的只是源对象的引用，当源对象的属性值改变时，目标对象的该属性值也会改变。
 <br>[详细参考资料](https://blog.csdn.net/qq_30100043/article/details/53422657)
    
+#### <a id="put">put,get,post</a>
+[别人高级的回答](https://www.zhihu.com/question/48482736)
+<br>[易懂的回答](https://www.jianshu.com/p/62e56c53b1b9)
+<br>我的理解
+<br>get：是从服务器中获取某一资源，就比如，home页中从服务器中获取product的列表信息。
+<br>post：是向服务器提交，创建了新的数据内容，就比如在detail页面中，选择立即购买，订单就会从服务器获得从而产生一条新的数据。
+<br>put：也是向服务器提交，但是他就不会产生新的数据内容，而是修改相应的数据，就像在detail页面中，点击加入购物车，如果之前有相同的数据，那么就是数量变成x2，而不是像订单一样产生了新的数据。
