@@ -1,0 +1,37 @@
+<!--pages/order/order.wxml-->
+<view>
+  <image src="../../images/bg.png" class="bg"></image>
+  <view wx:if="{{!userInfo}}">
+      <view class="userInfo-list">
+          <view class="userInfo-image"></view>
+          <view>
+             <view class="userInfo-name">未登录</view>
+             <view class="fail-text">点击微信登录后可方便登录</view>
+          </view>
+      </view>
+      <button open-type="getUserInfo" bindgetuserinfo="onTapLogin"class="getuser">微信登录</button><!--点击获取用户信息-->
+   </view>
+   <view wx:elif="{{orderList.length>0}}">
+      <view class="orderCard">
+          <image src="../../images/line-black.png" class="line-back"></image>
+          <view class="ordered">已完成</view>
+      </view>
+      <view class="order" wx:for="{{orderList}}" wx:key="id" wx:for-index="oindex" wx:for-item="oitem">
+        <view class="orderList" wx:for="{{oitem.list}}" wx:key="id">
+           <image src="{{item.image}}" class="order-image"></image>
+           <view class="order-product">
+              <view class="order-name">{{item.name}}</view>
+              <view class="order-price">￥{{item.price}}</view>
+           </view>
+           <view>
+               <button class="evoluate">评价</button>
+               <view class="evoluate-number">x1</view>
+           </view>
+        </view>
+      </view>
+   </view>
+   <view wx:else class="order-empty">
+      <image src="../../images/order.png" class="empty-image"></image>
+      <view class="empty-text">暂时还没有订单</view>
+   </view>
+</view>

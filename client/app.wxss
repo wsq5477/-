@@ -1,0 +1,53 @@
+/**app.wxss**/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+} 
+.bg
+{
+  width:750rpx;
+  height:254rpx;
+}
+.fail-text
+{
+  flex: 1;
+  font-size: 30rpx;
+  color: rgba(29, 29, 38, 0.8);
+}
+.getuser{
+  position:relative;
+  top:-100rpx;
+  background:#F5E069;
+  font-weight: bold;
+  margin:0rpx 250rpx;
+}
+.userInfo-list{
+  display:flex;
+  align-items:center;
+  background:#fff;
+  position: relative;
+  top:-130rpx;
+  border-radius:13rpx 13rpx 0rpx 0rpx;
+  box-shadow: 0rpx 2rpx 13rpx 5rpx rgba(0,0,0,0.02);
+  margin:0rpx 20rpx 0rpx 20rpx;
+  padding: 55rpx 40rpx;
+}
+.userInfo-image{
+  flex-shrink:0;
+  width:100rpx;
+  height:100rpx;
+  background:#F5E069;
+  border-radius:50%;
+  margin-right:20rpx;
+}
+.userInfo-name
+{
+  flex: 1;
+  white-space: nowrap;/*段落中的文本不进行换行*/
+  overflow: hidden;
+  text-overflow: ellipsis;/*显示省略号来代表被修剪的文字*/
+  font-weight: bold;
+}

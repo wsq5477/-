@@ -1,0 +1,35 @@
+<view class="detail-card">
+   <image src="{{product.image}}" class="detail-product"></image>
+   <view class="detail-name">{{product.name}}</view>
+   <view class="detail-source">{{product.source}}</view>
+   <view class="detail-list">
+       <view class="detail-money">￥</view>
+       <view class="detail-price">{{product.price}}</view>
+   </view>
+</view>
+
+<view class="product-evaluate">
+  <view class="product-leave">
+     <view class="leave-list">
+       <image src="../../images/check-yellow.png" class="leave-image"></image>
+       <view class="leave-text">七天免费退货</view>
+     </view>
+     <view class="leave-list">
+        <image src="../../images/check-yellow.png" class="leave-image"></image>
+        <view class="leave-text">24小时内发货并配送运费险</view>
+     </view>
+  </view>
+  <view class="evaluates">
+     <view class="evaluate-list">
+        <view class="evaluated">已买评价</view>
+        <view class="evaluate-number">1条</view>
+        <image class="evaluate-image"src="../../images/grey-arrow.png"></image>
+     </view>
+     <view class="evaluate-text">"test"</view>
+  </view>
+</view>
+
+<view class="trolley">
+   <view class="trolley-text" bindtap="addToTrolley">加入购物车</view>
+   <view class="trolley-buy" bindtap='buy'>立即购买</view>
+</view>

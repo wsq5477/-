@@ -1,0 +1,33 @@
+<!--pages/home/home.wxml-->
+<view>
+  <image src="../../images/bg.png" class="bg"></image>
+  <view class="focus">
+    <view class="focusList">
+      <image src="../../images/line-red.png"class="lineRed"></image>
+      <view class="focus-text">{{productList[0].name}}</view>
+      <image src="../../images/line-red.png"class="lineRed"></image>
+    </view>
+    <image src="../../images/discount.png" class="discount"></image>
+    <image src="{{productList[0].image}}" class="hot-image"></image>
+  </view>
+
+  
+ <view class="divideList">
+  <image src="../../images/line-black.png"class="lineBlack"></image>
+  <view class="divide-text">春季推荐</view>
+  <image src="../../images/line-black.png"class="lineBlack"></image>
+ </view>
+
+<view class='product-row' wx:for='{{productList}}' wx:key='id' wx:if='{{index%2 === 1}}'>
+   <navigator class="product-box" wx:for="{{[productList[index], productList[index+1]]}}" wx:key='id' wx:for-index='pindex' wx:for-item='pitem' url="/pages/detail/detail?id={{pitem.id}}">
+     <image src="{{pitem.image}}" mode="widthFix" class="product-image"></image>
+     <view class="product-name">{{pitem.name}}</view>
+     <view class="products">
+        <view class="product-money">￥</view>
+        <view class="product-price">{{pitem.price}}</view>
+        <view class="product-plus" catchtap='addToTrolley' data-id="{{pitem.id}}">+</view><!--使用catchtap阻止冒泡，如果是使用bindtap，当点击加号时会自动向父元素进行冒泡，进入detail页面-->
+     </view>
+   </navigator>
+</view>
+
+ </view>

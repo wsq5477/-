@@ -1,0 +1,101 @@
+/* pages/home/home.wxss */
+.bg{
+  width:750rpx;
+  height:254rpx;
+}
+.focus{
+  position:relative;
+  background: #fff;
+  border:1px solid #fff;
+  border-radius:15rpx 15rpx;
+  top:-180rpx;
+  left:50rpx;
+  width:600rpx;
+  padding-left:50rpx;
+  box-shadow:0rpx 2rpx 13rpx 5rpx rgba(0,0,0,0.02);
+}
+.focusList{
+  display:flex;
+  align-items:center;
+  margin-bottom:50rpx;
+  margin-top:50rpx;
+}
+.focus-text
+{
+  line-height:40rpx;
+  padding:0rpx 20rpx;
+  font-size: 28rpx;
+  color: #34373D;
+}
+.lineRed,.lineBlack{
+  width:24rpx;
+  height:39rpx;
+}
+.discount{
+  width:259rpx;
+  height:188rpx;
+}
+.hot-image{
+  width:241rpx;
+  height:241rpx;
+  position:absolute;
+  top:50rpx;
+  left:350rpx;
+}
+.divideList{
+  display:flex;
+  align-items:center;
+  margin-top:-100rpx;
+  margin-left:260rpx;
+}
+.divide-text
+{
+  font-size: 28rpx;
+  padding:0rpx 20rpx;
+  font-weight: strong;
+}
+.product-row{
+  display:flex;
+  justify-content: space-around;
+  margin:40rpx 52rpx 28rpx;
+}
+.product-box{
+  flex:1; /*随父元素的放大或缩小而变化*/
+  background:#fff;
+  border:1px solid #fff;
+  border-radius:13rpx;
+  box-shadow:0rpx 2rpx 13rpx 5rpx rgba(0,0,0,0.02);
+}
+.product-box:first-child{
+  margin-right:27rpx;
+}
+.product-image{
+  width:100%;
+}
+.product-name{
+  font-size:28rpx;
+  color:rgba(29,29,38,0.8);
+  line-height:40rpx;
+  margin-left:10rpx;
+  margin-bottom:20rpx;
+}
+.products{
+  display:flex;
+  align-items: center;
+ margin-bottom:10rpx;
+  margin-left:10rpx;
+}
+.product-money,.product-plus{
+  color:#34373D;
+  background-color:#f7e687;
+  width:36rpx;
+  height:36rpx;
+  line-height:36rpx;
+  border-radius:50%;
+  text-align:center;
+}
+.product-price{
+  flex:1;
+  font-size:28rpx;
+  margin-left:10rpx;
+}

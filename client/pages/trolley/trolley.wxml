@@ -1,0 +1,57 @@
+<view class="window-bg">
+  <image src="../../images/bg.png" class="bg"></image>
+  <view wx:if="{{!userInfo}}">
+      <view class="userInfo-list">
+          <view class="userInfo-image"></view>
+          <view>
+             <view class="userInfo-name">未登录</view>
+             <view class="fail-text">点击微信登录后可方便登录</view>
+          </view>
+      </view>
+      <button open-type="getUserInfo" bindgetuserinfo="onTapLogin"class="getuser">微信登录</button><!--点击获取用户信息-->
+  </view>
+<view wx:elif="{{trolleyList.length>0}}">
+  <view>
+      <view class="trolley-card">
+      <view  class="trolley-check-wrapper white {{isTrolleyTotalCheck?'check':''}}">
+        <image src="../../images/check.png" wx:if="{{isTrolleyTotalCheck}}" class="trolley-check"></image>
+      </view>
+        <view class="trolley-text">全选</view>
+        <view class="edit">{{isTrolleyEdit?"完成":"编辑"}}</view>
+      </view>
+      <view class="order" wx:for="{{trolleyList}}" wx:key="id" wx:for-index="oindex" wx:for-item="oitem">
+           <view class="orderList">
+              <image src="../../images/check.png" class="check" wx:if="{{trolleyCheckMap[oitem.id]}}"></image>
+              <image class="check" wx:else></image>
+              <image src="{{oitem.image}}" class="order-image"></image>
+              <view class="order-product">
+                  <view class="order-name">{{oitem.name}}</view>
+                  <view class="order-price">￥{{oitem.price}}</view>
+              </view>
+              <view>
+                  <view class="evoluate-number" wx:if="{{!isTrolleyEdit}}">X{{oitem.count}}</view>
+                  <view wx:else class="evoluate-count">
+                     <view class="evoluate-division">-</view>
+                     <view class="evoluate-number">{{oitem.count}}</view>
+                     <view class="evoluate-sum">+</view>
+                  </view>
+              </view>
+            </view>
+      </view>
+   </view>
+   <view class="trolley-list">
+       <view  class="trolley-check-wrapper white {{isTrolleyTotalCheck?'check':''}}">
+        <image src="../../images/check.png" wx:if="{{isTrolleyTotalCheck}}" class="trolley-check"></image>
+      </view>
+       <view class="trolley-text">全选</view>
+       <view class="trolley-account">总价</view>
+       <view class="account">￥{{trolleyAccount}}</view>
+       <view class="trolley-btn {{trolleyAccount?'':'forbid'}}">结算</view>
+   </view>
+</view>
+<view wx:else class="order-empty">
+      <image src="../../images/trolley.png" class="empty-image"></image>
+      <view class="empty-text">购物车是空的</view>
+      <view class="empty-text">快添加物品进来吧</view>
+</view>
+</view>

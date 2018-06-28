@@ -1,0 +1,45 @@
+/* pages/user/user.wxss */
+.bg
+{
+  width:750rpx;
+  height:254rpx;
+}
+.split{
+  height:8rpx;
+  background: #F9F9F9;
+  position:relative;
+  top:-130rpx;
+  margin:0rpx 20rpx; 
+}
+.user{
+  position:relative;
+  background:#fff;
+  border-radius:0rpx 0rpx 13rpx 13rpx;
+  box-shadow: 0rpx 2rpx 13rpx 5rpx rgba(0,0,0,0.02);
+  top:-130rpx;
+  margin:0rpx 20rpx;
+}
+.contact-list,.location-list{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+}
+.location-list{
+  border-bottom:1rpx solid rgba(151, 151, 151, 0.2);
+  margin:0rpx 40rpx;
+}
+.contact-list{
+  margin:0rpx 40rpx;
+}
+.user-location{
+  padding:50rpx 0rpx;
+  font-size: 30rpx;
+}
+.user-contact{
+  padding:50rpx 0rpx;
+  font-size: 30rpx;
+}
+.arrow{
+  width:11rpx;
+  height:18rpx;
+}
